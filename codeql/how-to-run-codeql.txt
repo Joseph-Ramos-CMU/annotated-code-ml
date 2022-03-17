@@ -1,0 +1,34 @@
+This assumes CodeQL for Python has already been installed and the .codeql folder exists under home
+
+First create run the following command in the project directory containing the python files/ projkect you want to analyze:
+
+codeql database create test-database --language=python
+
+If you change the query files, you may need to delete the database and run the above command again. I think codeql caches the result of
+previous runs for that query and may try to reuse them. There might be an option you can use on the analyze command to
+avoid this, too.
+
+
+
+
+For getting information on non-parameter variables:
+First copy the query file to inside the .codeql package (I believe this helps deal with import issues)
+cp VariableUses.ql ~/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql
+
+
+
+To run the VariableUses.ql query:
+codeql database analyze test-database --format=CSV --output=variable-uses-output.txt ~/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql
+
+
+
+
+
+
+For getting information on function parameters:
+
+First copy the query file to inside the .codeql package (I believe this helps deal with import issues)
+cp ParameterUses.ql ~/.codeql/packages/codeql/python-queries/0.0.10/Variables/ParameterUses.ql
+
+Then run the ParameterUses.ql query:
+codeql database analyze test-database --format=CSV --output=parameter-uses-output.txt ~/.codeql/packages/codeql/python-queries/0.0.10/Variables/ParameterUses.ql

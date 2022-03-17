@@ -1,0 +1,618 @@
+[2022-03-17 00:07:59] This is codeql execute queries -J-Xmx983M --off-heap-ram=983 --verbosity=progress --logdir=/mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database/log --evaluator-log-level=1 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/qlconfig.yml --no-rerun --output=/mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database/results -- /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database/db-python /home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql
+[2022-03-17 00:07:59] Calling plumbing command: codeql resolve queries --format=json -- /home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql
+[2022-03-17 00:08:00] Plumbing command codeql resolve queries completed:
+                      [
+                        "/home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql"
+                      ]
+[2022-03-17 00:08:00] Creating executor with 1 threads.
+[2022-03-17 00:08:00] Calling plumbing command: codeql resolve library-path --qlconfig-file=/mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/qlconfig.yml --query=/home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql --format=json
+[2022-03-17 00:08:00] [DETAILS] resolve library-path> Resolving query at normalized path /home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql.
+[2022-03-17 00:08:00] [DETAILS] resolve library-path> Found enclosing pack 'codeql/python-queries' at /home/user1/.codeql/packages/codeql/python-queries/0.0.10.
+[2022-03-17 00:08:00] [DETAILS] resolve library-path> Adding compilation cache at /home/user1/.codeql/packages/codeql/python-queries/0.0.10/.cache.
+[2022-03-17 00:08:00] [DETAILS] resolve library-path> Resolving library dependencies from /home/user1/.codeql/packages/codeql/python-queries/0.0.10/qlpack.yml.
+[2022-03-17 00:08:00] [DETAILS] resolve library-path> QL pack dependencies for /home/user1/.codeql/packages/codeql/python-queries/0.0.10 resolved OK.
+[2022-03-17 00:08:00] [DETAILS] resolve library-path> Found dbscheme through QL packs: /home/user1/.codeql/packages/codeql/python-queries/0.0.10/.codeql/libraries/codeql/python-all/0.0.10/semmlecode.python.dbscheme.
+[2022-03-17 00:08:00] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/user1/.codeql/packages/codeql/python-queries/0.0.10",
+                          "/home/user1/.codeql/packages/codeql/python-queries/0.0.10/.codeql/libraries/codeql/python-all/0.0.10",
+                          "/home/user1/.codeql/packages/codeql/python-queries/0.0.10/.codeql/libraries/codeql/suite-helpers/0.0.3"
+                        ],
+                        "dbscheme" : "/home/user1/.codeql/packages/codeql/python-queries/0.0.10/.codeql/libraries/codeql/python-all/0.0.10/semmlecode.python.dbscheme",
+                        "compilationCache" : [
+                          "/home/user1/.codeql/packages/codeql/python-queries/0.0.10/.cache"
+                        ],
+                        "relativeName" : "codeql/python-queries/Variables/VariableUses.ql",
+                        "qlPackName" : "codeql/python-queries"
+                      }
+[2022-03-17 00:08:00] Calling plumbing command: codeql resolve ml-models --search-path=/home/user1/.codeql/packages/codeql/python-queries/0.0.10:/home/user1/.codeql/packages/codeql/python-queries/0.0.10/.codeql/libraries/codeql/python-all/0.0.10:/home/user1/.codeql/packages/codeql/python-queries/0.0.10/.codeql/libraries/codeql/suite-helpers/0.0.3 --insecurely-execute-ml-model-checksums=
+[2022-03-17 00:08:00] [DETAILS] resolve ml-models> Scanning for [codeql-pack.yml, qlpack.yml] from /home/user1/.codeql/packages/codeql/python-queries/0.0.10/
+[2022-03-17 00:08:00] [DETAILS] resolve ml-models> Scanning for [codeql-pack.yml, qlpack.yml] from /home/user1/.codeql/packages/codeql/python-queries/0.0.10/.codeql/libraries/codeql/python-all/0.0.10/
+[2022-03-17 00:08:00] [DETAILS] resolve ml-models> Scanning for [codeql-pack.yml, qlpack.yml] from /home/user1/.codeql/packages/codeql/python-queries/0.0.10/.codeql/libraries/codeql/suite-helpers/0.0.3/
+[2022-03-17 00:08:00] [DETAILS] resolve ml-models> Scanning for [codeql-pack.yml, qlpack.yml] from /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/.codeqlmanifest.json
+[2022-03-17 00:08:00] [DETAILS] resolve ml-models> Scanning for [codeql-pack.yml, qlpack.yml] from /mnt/d/Documents/CMU S22/07400/codeql-linux64/
+[2022-03-17 00:08:00] [DETAILS] resolve ml-models> Not scanning from /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql which is already done.
+[2022-03-17 00:08:00] Plumbing command codeql resolve ml-models completed:
+                      {
+                        "models" : [ ]
+                      }
+[2022-03-17 00:08:00] [PROGRESS] execute queries> Compiling query plan for /home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql.
+[2022-03-17 00:08:00] [DETAILS] execute queries> Resolving imports for /home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql.
+[2022-03-17 00:08:00] Resolved file set for /home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql hashes to 86e6df0214719150239a3d73ba014ae57c3792f6.
+[2022-03-17 00:08:00] [DETAILS] execute queries> Checking QL for /home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql.
+[2022-03-17 00:08:01] ExternalModuleBindingPass ...
+[2022-03-17 00:08:02] ExternalModuleBindingPass time: 00:00.862
+[2022-03-17 00:08:02] QLPredicateSynthesiser ...
+[2022-03-17 00:08:02] QLPredicateSynthesiser time: 00:00.013
+[2022-03-17 00:08:02] DeclarationBindingPass ...
+[2022-03-17 00:08:02] DeclarationBindingPass time: 00:00.076
+[2022-03-17 00:08:02] Fixed point time ...
+[2022-03-17 00:08:02] Fixed point time time: 00:00.183
+[2022-03-17 00:08:02] ReferenceBindingPass ...
+[2022-03-17 00:08:02] ReferenceBindingPass time: 00:00.047
+[2022-03-17 00:08:02] DeclarationBindingPass ...
+[2022-03-17 00:08:02] DeclarationBindingPass time: 00:00.038
+[2022-03-17 00:08:02] PredicateBodyBindingPass ...
+[2022-03-17 00:08:02] PredicateBodyBindingPass time: 00:00.189
+[2022-03-17 00:08:02] LanguagePragmaPropagationPass ...
+[2022-03-17 00:08:02] LanguagePragmaPropagationPass time: 00:00.013
+[2022-03-17 00:08:02] Ambiguity checks ...
+[2022-03-17 00:08:02] Ambiguity checks time: 00:00.051
+[2022-03-17 00:08:02] Ql checks ...
+[2022-03-17 00:08:02] Ql checks time: 00:00.181
+[2022-03-17 00:08:03] Compilation pipeline
+[2022-03-17 00:08:03] Type Inference ...
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: Best number of iterations,Maximum number of runs,Number of BDD variables,Size of BDD for typefacts
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,273,303
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,48,68
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,5,5
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,23,23
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,9,9
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,45,49
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,5,5
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,8,10
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-03-17 00:08:03] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-03-17 00:08:04] Type Inference time: 00:00.849
+[2022-03-17 00:08:04] Binding Checks ...
+[2022-03-17 00:08:04] Binding Checks time: 00:00.120
+[2022-03-17 00:08:04] [DETAILS] execute queries> Optimizing /home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql.
+[2022-03-17 00:08:04] Processing compilation pipeline
+[2022-03-17 00:08:04] Started compiling a query
+[2022-03-17 00:08:04] Initialising compiler...
+[2022-03-17 00:08:04] 	 ... compiler initialised
+[2022-03-17 00:08:04] About to start query optimisation
+[2022-03-17 00:08:04] Compilation cache hit - skipping compilation.
+[2022-03-17 00:08:05] Compilation cache hit - skipping compilation.
+[2022-03-17 00:08:05] CSV_COMPILATION: NONE,MISC,RA_TRANSLATION,OPTIMISATIONS
+[2022-03-17 00:08:05] CSV_COMPILATION: 59,164,0,0
+[2022-03-17 00:08:05] [PROGRESS] execute queries> [1/1 comp 4.5s] Compiled /home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql.
+[2022-03-17 00:08:05] [PROGRESS] execute queries> Starting evaluation of codeql/python-queries/Variables/VariableUses.ql.
+[2022-03-17 00:08:05] Starting evaluation of /home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql
+[2022-03-17 00:08:05] (0s) Start query execution
+[2022-03-17 00:08:05] (0s) Beginning execution of Flow::BasicBlock::getImmediateDominator_dispred#ff
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_idoms/2@1baf6ada with 41 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_flow_bb_node/4@256fc4pm with 45 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate project#py_flow_bb_node/1@998d83p6
+[2022-03-17 00:08:05] (0s)  >>> Created relation project#py_flow_bb_node/1@998d83p6 with 6 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Flow::BasicBlock::getImmediateDominator_dispred#ff/2@dccbfco6
+[2022-03-17 00:08:05] (0s)  >>> Created relation Flow::BasicBlock::getImmediateDominator_dispred#ff/2@dccbfco6 with 2 rows.
+[2022-03-17 00:08:05] (0s) No need to promote strings for predicate Flow::BasicBlock::getImmediateDominator_dispred#ff  as it does not contain computed strings.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Flow::BasicBlock::getImmediateDominator_dispred#ff/2@a97799ae with 2 rows.
+[2022-03-17 00:08:05] (0s) Beginning execution of VariableUses.ql
+[2022-03-17 00:08:05] (0s)  >>> Created relation variable/3@f495db9d with 16 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Variables::Variable::getScope_dispred#ff/2@9eae21rb
+[2022-03-17 00:08:05] (0s)  >>> Created relation Variables::Variable::getScope_dispred#ff/2@9eae21rb with 15 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Variables::Variable::getScope_dispred#ff_10#join_rhs/2@6182d6nq
+[2022-03-17 00:08:05] (0s)  >>> Created relation Variables::Variable::getScope_dispred#ff_10#join_rhs/2@6182d6nq with 15 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_Classes/2@6e23affl with 0 rows.
+[2022-03-17 00:08:05] (0s) Inferred that Class::Class::toString_dispred#ff/2@cc0f96e0 is empty, due to py_Classes/2@6e23affl.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Class::Class::toString_dispred#ff/2@cc0f96e0 with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_Functions/2@3e5e5b98 with 3 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Variables::LocalVariable#class#f/1@0f7d89eq
+[2022-03-17 00:08:05] (0s)  >>> Created relation Variables::LocalVariable#class#f/1@0f7d89eq with 7 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Variables::Variable::getId_dispred#ff/2@c456472s
+[2022-03-17 00:08:05] (0s)  >>> Created relation Variables::Variable::getId_dispred#ff/2@c456472s with 15 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_Modules/1@28481938 with 1 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Variables::Variable::toString_dispred#ff/2@de9224pq
+[2022-03-17 00:08:05] (0s)  >>> Created relation Variables::Variable::toString_dispred#ff/2@de9224pq with 15 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_variables/2@f9d974df with 21 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_exprs/4@09aaacr3 with 41 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstGenerated::Name_::getVariable_dispred#ff/2@593e3dm5
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstGenerated::Name_::getVariable_dispred#ff/2@593e3dm5 with 21 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate py_exprs_10#join_rhs/2@e36e5ego
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_exprs_10#join_rhs/2@e36e5ego with 41 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_expr_contexts/3@9f3a0541 with 21 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate py_expr_contexts_12#join_rhs/2@b2d6f97m
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_expr_contexts_12#join_rhs/2@b2d6f97m with 21 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_stmts/4@24cd5380 with 16 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate py_stmts_10#join_rhs/2@4f7c12tu
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_stmts_10#join_rhs/2@4f7c12tu with 16 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate py_exprs_1230#join_rhs/4@34cc85c3
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_exprs_1230#join_rhs/4@34cc85c3 with 41 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstGenerated::AugAssign_::getOperation_dispred#ff/2@cb9e3cfi
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstGenerated::AugAssign_::getOperation_dispred#ff/2@cb9e3cfi with 0 rows.
+[2022-03-17 00:08:05] (0s) Inferred that Stmts::AugAssign::getTarget_dispred#ff/2@89ba73p2 is empty, due to AstGenerated::AugAssign_::getOperation_dispred#ff/2@cb9e3cfi.
+[2022-03-17 00:08:05] (0s) Inferred that Flow::BasicBlock::getNode_dispred#ffb/3@bf90cd4t is empty, due to Stmts::AugAssign::getTarget_dispred#ff/2@89ba73p2.
+[2022-03-17 00:08:05] (0s) Inferred that Flow::ControlFlowNode::getBasicBlock_dispred#bf/2@bc7efd8h is empty, due to Stmts::AugAssign::getTarget_dispred#ff/2@89ba73p2.
+[2022-03-17 00:08:05] (0s) Inferred that Flow::augstore#ff/2@dfa20evm is empty, due to Stmts::AugAssign::getTarget_dispred#ff/2@89ba73p2.
+[2022-03-17 00:08:05] (0s) Inferred that Flow::BasicBlock::getNode_dispred#ffb_201#join_rhs/3@cdb3ac3v is empty, due to Flow::BasicBlock::getNode_dispred#ffb/3@bf90cd4t.
+[2022-03-17 00:08:05] (0s) Inferred that Flow::BasicBlock::getNode_dispred#ffb_021#join_rhs/3@8a562958 is empty, due to Flow::BasicBlock::getNode_dispred#ffb/3@bf90cd4t.
+[2022-03-17 00:08:05] (0s) Inferred that Flow::augstore#ff_1#antijoin_rhs/1@46c6aa8p is empty, due to Flow::augstore#ff/2@dfa20evm.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Flow::BasicBlock::getNode_dispred#ffb/3@bf90cd4t with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Flow::BasicBlock::getNode_dispred#ffb_021#join_rhs/3@8a562958 with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Flow::BasicBlock::getNode_dispred#ffb_201#join_rhs/3@cdb3ac3v with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Flow::augstore#ff_1#antijoin_rhs/1@46c6aa8p with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Flow::ControlFlowNode::getBasicBlock_dispred#bf/2@bc7efd8h with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Stmts::AugAssign::getTarget_dispred#ff/2@89ba73p2 with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Flow::augstore#ff/2@dfa20evm with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Exprs::Name::isDefinition_dispred#f/1@f2faf6d4
+[2022-03-17 00:08:05] (0s)  >>> Created relation Exprs::Name::isDefinition_dispred#f/1@f2faf6d4 with 10 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Exprs::Name::defines_dispred#ff/2@f372deoa
+[2022-03-17 00:08:05] (0s)  >>> Created relation Exprs::Name::defines_dispred#ff/2@f372deoa with 10 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate py_flow_bb_node_10#join_rhs/2@16d1f9vt
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_flow_bb_node_10#join_rhs/2@16d1f9vt with 45 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstExtended::AstNode_not_Attribute_Call_IfExp_ImportMember_Name_NameConstant_PlaceHolder_Subscript#f#antijoin_rhs#4/1@e6d1caj6
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstExtended::AstNode_not_Attribute_Call_IfExp_ImportMember_Name_NameConstant_PlaceHolder_Subscript#f#antijoin_rhs#4/1@e6d1caj6 with 21 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstExtended::AstNode_not_Attribute_Call_IfExp_ImportMember_Name_NameConstant_PlaceHolder_Subscript#f#antijoin_rhs#5/1@9393cc61
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstExtended::AstNode_not_Attribute_Call_IfExp_ImportMember_Name_NameConstant_PlaceHolder_Subscript#f#antijoin_rhs#5/1@9393cc61 with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Flow::NameNode#f/1@ec97c187
+[2022-03-17 00:08:05] (0s)  >>> Created relation Flow::NameNode#f/1@ec97c187 with 19 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Variables::Variable::getId_dispred#ff_10#join_rhs/2@43300c0p
+[2022-03-17 00:08:05] (0s)  >>> Created relation Variables::Variable::getId_dispred#ff_10#join_rhs/2@43300c0p with 15 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Exprs::name_consts#ff/2@3f16654l
+[2022-03-17 00:08:05] (0s)  >>> Created relation Exprs::name_consts#ff/2@3f16654l with 1 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Exprs::name_consts#ff_10#join_rhs/2@0ae95dg2
+[2022-03-17 00:08:05] (0s)  >>> Created relation Exprs::name_consts#ff_10#join_rhs/2@0ae95dg2 with 1 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Exprs::NameConstant#class#f/1@d9fa737u
+[2022-03-17 00:08:05] (0s)  >>> Created relation Exprs::NameConstant#class#f/1@d9fa737u with 1 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Flow::NameConstantNode#class#f/1@2fccb1hg
+[2022-03-17 00:08:05] (0s)  >>> Created relation Flow::NameConstantNode#class#f/1@2fccb1hg with 1 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Flow::ControlFlowNode::isLoad_dispred#f/1@a74c37nu
+[2022-03-17 00:08:05] (0s)  >>> Created relation Flow::ControlFlowNode::isLoad_dispred#f/1@a74c37nu with 9 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Flow::NameNode::defines_dispred#ff/2@4fe74d00
+[2022-03-17 00:08:05] (0s)  >>> Created relation Flow::NameNode::defines_dispred#ff/2@4fe74d00 with 10 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Flow::NameNode::defines_dispred#ff_10#join_rhs/2@fd83e3hn
+[2022-03-17 00:08:05] (0s)  >>> Created relation Flow::NameNode::defines_dispred#ff_10#join_rhs/2@fd83e3hn with 10 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_patterns/4@a30653la with 0 rows.
+[2022-03-17 00:08:05] (0s) Inferred that py_patterns_10#join_rhs/2@a9e234oi is empty, due to py_patterns/4@a30653la.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_patterns_10#join_rhs/2@a9e234oi with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_StringParts/3@383b10af with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_dict_items/4@742fc1aa with 0 rows.
+[2022-03-17 00:08:05] (0s) Inferred that py_dict_items_10#join_rhs/2@a51916lc is empty, due to py_dict_items/4@742fc1aa.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_dict_items_10#join_rhs/2@a51916lc with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_comprehensions/3@ce66eft0 with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstExtended::AstNode#class#f/1@5352ff58
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstExtended::AstNode#class#f/1@5352ff58 with 61 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstExtended::AstNode_not_Attribute_Call_IfExp_ImportMember_Name_NameConstant_PlaceHolder_Subscript#f#antijoin_rhs/1@e43a5b7i
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstExtended::AstNode_not_Attribute_Call_IfExp_ImportMember_Name_NameConstant_PlaceHolder_Subscript#f#antijoin_rhs/1@e43a5b7i with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstExtended::AstNode_not_Attribute_Call_IfExp_ImportMember_Name_NameConstant_PlaceHolder_Subscript#f#antijoin_rhs#1/1@e6f7ca1o
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstExtended::AstNode_not_Attribute_Call_IfExp_ImportMember_Name_NameConstant_PlaceHolder_Subscript#f#antijoin_rhs#1/1@e6f7ca1o with 4 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstExtended::AstNode_not_Attribute_Call_IfExp_ImportMember_Name_NameConstant_PlaceHolder_Subscript#f#antijoin_rhs#2/1@af790flf
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstExtended::AstNode_not_Attribute_Call_IfExp_ImportMember_Name_NameConstant_PlaceHolder_Subscript#f#antijoin_rhs#2/1@af790flf with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstExtended::AstNode_not_Attribute_Call_IfExp_ImportMember_Name_NameConstant_PlaceHolder_Subscript#f#antijoin_rhs#3/1@f9a881o3
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstExtended::AstNode_not_Attribute_Call_IfExp_ImportMember_Name_NameConstant_PlaceHolder_Subscript#f#antijoin_rhs#3/1@f9a881o3 with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstExtended::AstNode_not_Attribute_Call_IfExp_ImportMember_Name_NameConstant_PlaceHolder_Subscript#f#antijoin_rhs#6/1@d97d21t0
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstExtended::AstNode_not_Attribute_Call_IfExp_ImportMember_Name_NameConstant_PlaceHolder_Subscript#f#antijoin_rhs#6/1@d97d21t0 with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstExtended::AstNode_not_Attribute_Call_IfExp_ImportMember_Name_NameConstant_PlaceHolder_Subscript#f/1@deff85uv
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstExtended::AstNode_not_Attribute_Call_IfExp_ImportMember_Name_NameConstant_PlaceHolder_Subscript#f/1@deff85uv with 36 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Exprs::Name_not_NameConstant#f/1@5662e9ta
+[2022-03-17 00:08:05] (0s)  >>> Created relation Exprs::Name_not_NameConstant#f/1@5662e9ta with 20 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate py_flow_bb_node_1023#join_rhs/4@50a143tb
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_flow_bb_node_1023#join_rhs/4@50a143tb with 45 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstExtended::AstNode::getAFlowNode_dispred#ff/2@8d65b490
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstExtended::AstNode::getAFlowNode_dispred#ff/2@8d65b490 with 45 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstExtended::AstNode::getAFlowNode_dispred#ff_10#join_rhs/2@03ceccbt
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstExtended::AstNode::getAFlowNode_dispred#ff_10#join_rhs/2@03ceccbt with 45 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_expr_lists/3@7f2196uc with 16 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate py_expr_lists_120#join_rhs/3@d651ad8b
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_expr_lists_120#join_rhs/3@d651ad8b with 16 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate m#AstGenerated::ExprList_::getAnItem_dispred#bf/1@f8883doq
+[2022-03-17 00:08:05] (0s)  >>> Created relation m#AstGenerated::ExprList_::getAnItem_dispred#bf/1@f8883doq with 8 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstGenerated::ExprList_::getAnItem_dispred#bf/2@9980adpn
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstGenerated::ExprList_::getAnItem_dispred#bf/2@9980adpn with 8 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstGenerated::Assign_::getATarget_dispred#ff/2@68af28e5
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstGenerated::Assign_::getATarget_dispred#ff/2@68af28e5 with 8 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstGenerated::Assign_::getATarget_dispred#ff_1#join_rhs/1@f9b71dd5
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstGenerated::Assign_::getATarget_dispred#ff_1#join_rhs/1@f9b71dd5 with 8 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Flow::list_or_tuple_nested_element#ff#shared#1/2@c26b054u
+[2022-03-17 00:08:05] (0s)  >>> Created relation Flow::list_or_tuple_nested_element#ff#shared#1/2@c26b054u with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Flow::list_or_tuple_nested_element#ff#shared/2@b081c10d
+[2022-03-17 00:08:05] (0s)  >>> Created relation Flow::list_or_tuple_nested_element#ff#shared/2@b081c10d with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstGenerated::ExprList_::getAnItem_dispred#bf_10#join_rhs/2@b0f68fl5
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstGenerated::ExprList_::getAnItem_dispred#bf_10#join_rhs/2@b0f68fl5 with 8 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate py_expr_lists_021#join_rhs/3@e8c3d97i
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_expr_lists_021#join_rhs/3@e8c3d97i with 16 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Flow::list_or_tuple_nested_element#ff#join_rhs/2@62f1c4du
+[2022-03-17 00:08:05] (0s)  >>> Created relation Flow::list_or_tuple_nested_element#ff#join_rhs/2@62f1c4du with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Flow::list_or_tuple_nested_element#ff/2@i1#4cb31w8i (iteration 1)
+[2022-03-17 00:08:05] (0s) Empty delta for Flow::list_or_tuple_nested_element#ff_delta (order for disjuncts: delta=<standard>).
+[2022-03-17 00:08:05] (0s) Accumulating deltas
+[2022-03-17 00:08:05] (0s)  >>> Created relation Flow::list_or_tuple_nested_element#ff/2@4cb31w8i with 0 rows.
+[2022-03-17 00:08:05] (0s) Inferred that Flow::list_or_tuple_nested_element#ff_10#join_rhs/2@674e57tl is empty, due to Flow::list_or_tuple_nested_element#ff/2@4cb31w8i.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Flow::list_or_tuple_nested_element#ff_10#join_rhs/2@674e57tl with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate py_exprs_032#join_rhs/3@ae8191ef
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_exprs_032#join_rhs/3@ae8191ef with 41 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate py_exprs_23#join_rhs/2@c74c84qf
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_exprs_23#join_rhs/2@c74c84qf with 41 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_aliases/3@7b8bae97 with 0 rows.
+[2022-03-17 00:08:05] (0s) Inferred that AstGenerated::Alias_::getAsname_dispred#ff/2@44b67a26 is empty, due to py_aliases/3@7b8bae97.
+[2022-03-17 00:08:05] (0s) Inferred that AstGenerated::Import_::getAName_dispred#ff/2@3b42b0b2 is empty, due to py_aliases/3@7b8bae97.
+[2022-03-17 00:08:05] (0s) Inferred that Stmts::Stmt::getScope_dispred#bf/2@543293la is empty, due to AstGenerated::Import_::getAName_dispred#ff/2@3b42b0b2.
+[2022-03-17 00:08:05] (0s) Inferred that AstGenerated::Alias_::getAsname_dispred#ff_1#join_rhs/1@39b61944 is empty, due to AstGenerated::Alias_::getAsname_dispred#ff/2@44b67a26.
+[2022-03-17 00:08:05] (0s) Inferred that AstGenerated::Import_::getAName_dispred#ff_10#join_rhs/2@e1cbe3r5 is empty, due to AstGenerated::Import_::getAName_dispred#ff/2@3b42b0b2.
+[2022-03-17 00:08:05] (0s) Inferred that Module::Module::hasFromFuture_dispred#fb#cpe#1/1@c03578dd is empty, due to Stmts::Stmt::getScope_dispred#bf/2@543293la.
+[2022-03-17 00:08:05] (0s) Inferred that Import::Import::getASubExpression_dispred#fb/2@925761rc is empty, due to AstGenerated::Import_::getAName_dispred#ff_10#join_rhs/2@e1cbe3r5.
+[2022-03-17 00:08:05] (0s) Inferred that Import::Import::getASubExpression_dispred#fb_10#join_rhs/2@a7e78etj is empty, due to Import::Import::getASubExpression_dispred#fb/2@925761rc.
+[2022-03-17 00:08:05] (0s) Inferred that Import::ImportExpr::implicitRelativeImportsAllowed_dispred#f#antijoin_rhs/1@5a53895j is empty, due to Module::Module::hasFromFuture_dispred#fb#cpe#1/1@c03578dd.
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstGenerated::Alias_::getAsname_dispred#ff/2@44b67a26 with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Import::ImportExpr::implicitRelativeImportsAllowed_dispred#f#antijoin_rhs/1@5a53895j with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Import::Import::getASubExpression_dispred#fb_10#join_rhs/2@a7e78etj with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Import::Import::getASubExpression_dispred#fb/2@925761rc with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstGenerated::Import_::getAName_dispred#ff/2@3b42b0b2 with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Module::Module::hasFromFuture_dispred#fb#cpe#1/1@c03578dd with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstGenerated::Import_::getAName_dispred#ff_10#join_rhs/2@e1cbe3r5 with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstGenerated::Alias_::getAsname_dispred#ff_1#join_rhs/1@39b61944 with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Stmts::Stmt::getScope_dispred#bf/2@543293la with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Flow::DefinitionNode#b/1@7b5fd9q5
+[2022-03-17 00:08:05] (0s)  >>> Created relation Flow::DefinitionNode#b/1@7b5fd9q5 with 8 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate m#AstExtended::AstNode::getLocation_dispred#bf/1@35e3d55k
+[2022-03-17 00:08:05] (0s)  >>> Created relation m#AstExtended::AstNode::getLocation_dispred#bf/1@35e3d55k with 10 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_locations/2@caae73re with 57 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate py_locations_10#join_rhs/2@fcd604rf
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_locations_10#join_rhs/2@fcd604rf with 57 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Exprs::Expr::getLocation_dispred#ff/2@fa523erj
+[2022-03-17 00:08:05] (0s)  >>> Created relation Exprs::Expr::getLocation_dispred#ff/2@fa523erj with 41 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Stmts::Stmt::getLocation_dispred#ff/2@7d93f38c
+[2022-03-17 00:08:05] (0s)  >>> Created relation Stmts::Stmt::getLocation_dispred#ff/2@7d93f38c with 16 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_scope_location/2@24dacd9d with 4 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate py_scope_location_10#join_rhs/2@579de02c
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_scope_location_10#join_rhs/2@579de02c with 4 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation locations_ast/6@116a69n5 with 72 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate locations_ast_234501#join_rhs/6@6267fcv4
+[2022-03-17 00:08:05] (0s)  >>> Created relation locations_ast_234501#join_rhs/6@6267fcv4 with 72 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate py_scope_location_1#antijoin_rhs/1@1b2a49ht
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_scope_location_1#antijoin_rhs/1@1b2a49ht with 4 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstExtended::AstNode::getLocation_dispred#bf/2@a1a9208k
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstExtended::AstNode::getLocation_dispred#bf/2@a1a9208k with 10 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Flow::ControlFlowNode::getLocation_dispred#bf/2@6e6478fs
+[2022-03-17 00:08:05] (0s)  >>> Created relation Flow::ControlFlowNode::getLocation_dispred#bf/2@6e6478fs with 10 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Exprs::NameConstant::toString_dispred#ff/2@90802ao4
+[2022-03-17 00:08:05] (0s)  >>> Created relation Exprs::NameConstant::toString_dispred#ff/2@90802ao4 with 1 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstGenerated::Name_::getVariable_dispred#ff_10#join_rhs/2@65b9d9kv
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstGenerated::Name_::getVariable_dispred#ff_10#join_rhs/2@65b9d9kv with 21 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Exprs::Name::getId_dispred#ff/2@3ebf5fbe
+[2022-03-17 00:08:05] (0s)  >>> Created relation Exprs::Name::getId_dispred#ff/2@3ebf5fbe with 21 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Exprs::Name::toString_dispred#ff/2@80f0acof
+[2022-03-17 00:08:05] (0s)  >>> Created relation Exprs::Name::toString_dispred#ff/2@80f0acof with 21 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate m#Files::Location::toString_dispred#bf/1@d3e46a1b
+[2022-03-17 00:08:05] (0s)  >>> Created relation m#Files::Location::toString_dispred#bf/1@d3e46a1b with 21 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_comments/3@ad467ahn with 11 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate m#Files::Location::getFile_dispred#bf#shared/1@e5ef35n8
+[2022-03-17 00:08:05] (0s)  >>> Created relation m#Files::Location::getFile_dispred#bf#shared/1@e5ef35n8 with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_strs/3@d35dd9ih with 18 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate py_strs_120#join_rhs/3@1fcaadck
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_strs_120#join_rhs/3@1fcaadck with 18 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstGenerated::ImportExpr_::getName_dispred#ff/2@ca8c99cf
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstGenerated::ImportExpr_::getName_dispred#ff/2@ca8c99cf with 0 rows.
+[2022-03-17 00:08:05] (0s) Inferred that AstGenerated::ImportMember_::getModule_dispred#fb/2@067f36qv is empty, due to AstGenerated::ImportExpr_::getName_dispred#ff/2@ca8c99cf.
+[2022-03-17 00:08:05] (0s) Inferred that Module::transitively_imported_from_entry_point#f/1@b4efew6t is empty, due to AstGenerated::ImportExpr_::getName_dispred#ff/2@ca8c99cf.
+[2022-03-17 00:08:05] (0s) Inferred that m#Import::Import::getASubExpression_dispred#fb/1@aaa5bc35 is empty, due to AstGenerated::ImportMember_::getModule_dispred#fb/2@067f36qv.
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstGenerated::ImportMember_::getModule_dispred#fb/2@067f36qv with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation m#Import::Import::getASubExpression_dispred#fb/1@aaa5bc35 with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Module::transitively_imported_from_entry_point#f/1@b4efew6t with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate m#Files::Location::getFile_dispred#bf/1@a3d8f9e5
+[2022-03-17 00:08:05] (0s)  >>> Created relation m#Files::Location::getFile_dispred#bf/1@a3d8f9e5 with 16 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate m#Files::Location::getPath_dispred#bf/1@7c9f947l
+[2022-03-17 00:08:05] (0s)  >>> Created relation m#Files::Location::getPath_dispred#bf/1@7c9f947l with 37 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation locations_default/6@d0a81fkd with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_module_path/2@9afca8hn with 1 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Files::Location::getPath_dispred#bf/2@3ca321m2
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::Location::getPath_dispred#bf/2@3ca321m2 with 37 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation files/2@19948aeb with 1 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation folders/2@90fba3t8 with 9 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Files::Container::getAbsolutePath_dispred#ff/2@a90db0du
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::Container::getAbsolutePath_dispred#ff/2@a90db0du with 10 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate m#Files::Location::getStartLine_dispred#bf/1@f966bd6k
+[2022-03-17 00:08:05] (0s)  >>> Created relation m#Files::Location::getStartLine_dispred#bf/1@f966bd6k with 21 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Files::Location::getStartLine_dispred#bf/2@478ebecn
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::Location::getStartLine_dispred#bf/2@478ebecn with 21 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_syntax_error_versioned/3@d8fb460q with 0 rows.
+[2022-03-17 00:08:05] (0s) Inferred that py_syntax_error_versioned_20#join_rhs/2@731701bm is empty, due to py_syntax_error_versioned/3@d8fb460q.
+[2022-03-17 00:08:05] (0s) Inferred that py_syntax_error_versioned_201#join_rhs/3@ea3a8e7j is empty, due to py_syntax_error_versioned/3@d8fb460q.
+[2022-03-17 00:08:05] (0s) Inferred that Files::SyntaxError#f/1@d6be5c01 is empty, due to py_syntax_error_versioned_20#join_rhs/2@731701bm.
+[2022-03-17 00:08:05] (0s) Inferred that Files::SyntaxError::getMessage_dispred#ff/2@031e837s is empty, due to py_syntax_error_versioned_201#join_rhs/3@ea3a8e7j.
+[2022-03-17 00:08:05] (0s) Inferred that Files::EncodingError#class#f/1@bb248e4j is empty, due to Files::SyntaxError::getMessage_dispred#ff/2@031e837s.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_syntax_error_versioned_20#join_rhs/2@731701bm with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_syntax_error_versioned_201#join_rhs/3@ea3a8e7j with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::EncodingError#class#f/1@bb248e4j with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::SyntaxError::getMessage_dispred#ff/2@031e837s with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::SyntaxError#f/1@d6be5c01 with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Files::Location::toString_dispred#bf/2@eb9fefa2
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::Location::toString_dispred#bf/2@eb9fefa2 with 21 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_scope_flow/3@9acb65a4 with 10 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate py_scope_flow_201#join_rhs/3@6e979a56
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_scope_flow_201#join_rhs/3@6e979a56 with 10 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Scope::Scope::getANormalExit_dispred#ff/2@2af66ctb
+[2022-03-17 00:08:05] (0s)  >>> Created relation Scope::Scope::getANormalExit_dispred#ff/2@2af66ctb with 4 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Scope::Scope::getANormalExit_dispred#ff_10#join_rhs/2@361791vt
+[2022-03-17 00:08:05] (0s)  >>> Created relation Scope::Scope::getANormalExit_dispred#ff_10#join_rhs/2@361791vt with 4 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Function::Function::toString_dispred#ff/2@c0292bb0
+[2022-03-17 00:08:05] (0s)  >>> Created relation Function::Function::toString_dispred#ff/2@c0292bb0 with 3 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate py_module_path_10#join_rhs/2@36117a0q
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_module_path_10#join_rhs/2@36117a0q with 1 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Module::Module::isPackage_dispred#f/1@923d6em6
+[2022-03-17 00:08:05] (0s)  >>> Created relation Module::Module::isPackage_dispred#f/1@923d6em6 with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstGenerated::Module_::getKind#ff/2@bf6e23u0
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstGenerated::Module_::getKind#ff/2@bf6e23u0 with 0 rows.
+[2022-03-17 00:08:05] (0s) Inferred that AstGenerated::Module_::getKind#ff_0#antijoin_rhs/1@5bc903jq is empty, due to AstGenerated::Module_::getKind#ff/2@bf6e23u0.
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstGenerated::Module_::getKind#ff_0#antijoin_rhs/1@5bc903jq with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Module::Module::getKind_dispred#ff/2@2618b1b6
+[2022-03-17 00:08:05] (0s)  >>> Created relation Module::Module::getKind_dispred#ff/2@2618b1b6 with 1 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstGenerated::Module_::getName#ff/2@a9d6a6pu
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstGenerated::Module_::getName#ff/2@a9d6a6pu with 0 rows.
+[2022-03-17 00:08:05] (0s) Inferred that AstGenerated::Module_::getName#ff_0#antijoin_rhs/1@c2afda0n is empty, due to AstGenerated::Module_::getName#ff/2@a9d6a6pu.
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstGenerated::Module_::getName#ff_0#antijoin_rhs/1@c2afda0n with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Files::Container::getStem_dispred#ff/2@ea4954d6
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::Container::getStem_dispred#ff/2@ea4954d6 with 10 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate project#Scope::Scope::getANormalExit_dispred#ff/1@d2d6a6op
+[2022-03-17 00:08:05] (0s)  >>> Created relation project#Scope::Scope::getANormalExit_dispred#ff/1@d2d6a6op with 4 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate py_scope_flow_02#join_rhs/2@95ff2771
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_scope_flow_02#join_rhs/2@95ff2771 with 10 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate m#AstGenerated::AstNode_::toString_dispred#bf#antijoin_rhs/1@6b7a1eld
+[2022-03-17 00:08:05] (0s)  >>> Created relation m#AstGenerated::AstNode_::toString_dispred#bf#antijoin_rhs/1@6b7a1eld with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate m#AstGenerated::AstNode_::toString_dispred#bf#shared/1@3577918m
+[2022-03-17 00:08:05] (0s)  >>> Created relation m#AstGenerated::AstNode_::toString_dispred#bf#shared/1@3577918m with 10 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate m#AstGenerated::AstNode_::toString_dispred#bf/1@309cf73j
+[2022-03-17 00:08:05] (0s)  >>> Created relation m#AstGenerated::AstNode_::toString_dispred#bf/1@309cf73j with 10 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Module::Module::getFile_dispred#ff/2@dd2993t1
+[2022-03-17 00:08:05] (0s)  >>> Created relation Module::Module::getFile_dispred#ff/2@dd2993t1 with 1 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Module::Module::getFile_dispred#ff_10#join_rhs/2@d4b5d5tg with 1 rows.
+[2022-03-17 00:08:05] Cachaca resolved layer: evaluator Module::Module::getFile_dispred#ff_10#join_rhs/2@d4b5d5tg
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Files::Container::getBaseName_dispred#ff/2@88723e6o
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::Container::getBaseName_dispred#ff/2@88723e6o with 10 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Files::File::getShortName_dispred#ff/2@47d80e16
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::File::getShortName_dispred#ff/2@47d80e16 with 1 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate py_exprs_230#join_rhs/3@8e794e7b
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_exprs_230#join_rhs/3@8e794e7b with 41 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate m#Exprs::Expr::toString_dispred#bf/1@i1#22fbawjt (iteration 1)
+[2022-03-17 00:08:05] (0s) 			 - m#Exprs::Expr::toString_dispred#bf_delta has 10 rows (order for disjuncts: delta=<standard>).
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate m#Exprs::Expr::toString_dispred#bf/1@i2#22fbawjt (iteration 2)
+[2022-03-17 00:08:05] (0s) Empty delta for m#Exprs::Expr::toString_dispred#bf_delta (order for disjuncts: delta=500000).
+[2022-03-17 00:08:05] (0s) Accumulating deltas
+[2022-03-17 00:08:05] (0s)  >>> Created relation m#Exprs::Expr::toString_dispred#bf/1@22fbawjt with 10 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_numbers/3@768c693r with 6 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate py_numbers_201#join_rhs/3@c9a19eb2
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_numbers_201#join_rhs/3@c9a19eb2 with 6 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Exprs::ImaginaryLiteral#class#ff/2@d63149de
+[2022-03-17 00:08:05] (0s)  >>> Created relation Exprs::ImaginaryLiteral#class#ff/2@d63149de with 0 rows.
+[2022-03-17 00:08:05] (0s) Inferred that Exprs::ImaginaryLiteral#class#ff_0#antijoin_rhs/1@c4627cub is empty, due to Exprs::ImaginaryLiteral#class#ff/2@d63149de.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Exprs::ImaginaryLiteral#class#ff_0#antijoin_rhs/1@c4627cub with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Exprs::FloatLiteral#class#f/1@c024919q
+[2022-03-17 00:08:05] (0s)  >>> Created relation Exprs::FloatLiteral#class#f/1@c024919q with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Exprs::IntegerLiteral#class#f/1@dad086s4
+[2022-03-17 00:08:05] (0s)  >>> Created relation Exprs::IntegerLiteral#class#f/1@dad086s4 with 3 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate py_variables_10#join_rhs/2@fa89bfgp
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_variables_10#join_rhs/2@fa89bfgp with 21 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Exprs::Num#class#f/1@a5063f8t
+[2022-03-17 00:08:05] (0s)  >>> Created relation Exprs::Num#class#f/1@a5063f8t with 3 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Exprs::Expr::toString_dispred#bf#join_rhs/2@8d5d8f6b
+[2022-03-17 00:08:05] (0s)  >>> Created relation Exprs::Expr::toString_dispred#bf#join_rhs/2@8d5d8f6b with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Exprs::Expr::toString_dispred#bf/2@i1#5a7a8wcq (iteration 1)
+[2022-03-17 00:08:05] (0s) 			 - Exprs::Expr::toString_dispred#bf_delta has 10 rows (order for disjuncts: delta=<standard>).
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Exprs::Expr::toString_dispred#bf/2@i2#5a7a8wcq (iteration 2)
+[2022-03-17 00:08:05] (0s) Empty delta for Exprs::Expr::toString_dispred#bf_delta (order for disjuncts: delta=500000).
+[2022-03-17 00:08:05] (0s) Accumulating deltas
+[2022-03-17 00:08:05] (0s)  >>> Created relation Exprs::Expr::toString_dispred#bf/2@5a7a8wcq with 10 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation containerparent/2@60caf0ht with 9 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate containerparent_10#join_rhs/2@ffc0c3gl
+[2022-03-17 00:08:05] (0s)  >>> Created relation containerparent_10#join_rhs/2@ffc0c3gl with 9 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate m#Module::isPotentialSourcePackage#b/1@e557f56t
+[2022-03-17 00:08:05] (0s)  >>> Created relation m#Module::isPotentialSourcePackage#b/1@e557f56t with 10 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate m#Module::isPotentialPackage#b/1@f262denh
+[2022-03-17 00:08:05] (0s)  >>> Created relation m#Module::isPotentialPackage#b/1@f262denh with 10 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation py_flags_versioned/3@6e80061j with 70 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Constants::explicit_major_version#f/1@3bfac88b
+[2022-03-17 00:08:05] (0s)  >>> Created relation Constants::explicit_major_version#f/1@3bfac88b with 0 rows.
+[2022-03-17 00:08:05] (0s) Inferred that Constants::explicit_major_version#f#nonempty/0@3ae233ge is empty, due to Constants::explicit_major_version#f/1@3bfac88b.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Constants::explicit_major_version#f#nonempty/0@3ae233ge with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Constants::major_version#f#antijoin_rhs/0@0eef2a0a
+[2022-03-17 00:08:05] (0s)  >>> Created relation Constants::major_version#f#antijoin_rhs/0@0eef2a0a with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Constants::major_version#f/1@9b35f20b
+[2022-03-17 00:08:05] (0s)  >>> Created relation Constants::major_version#f/1@9b35f20b with 1 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate project#Module::isPotentialPackage#b#nullary/0@9f87aait
+[2022-03-17 00:08:05] (0s)  >>> Created relation project#Module::isPotentialPackage#b#nullary/0@9f87aait with 1 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Module::isPotentialPackage#b/1@da3503ru
+[2022-03-17 00:08:05] (0s)  >>> Created relation Module::isPotentialPackage#b/1@da3503ru with 0 rows.
+[2022-03-17 00:08:05] (0s) Inferred that Module::isPotentialSourcePackage#b/1@050bc8qf is empty, due to Module::isPotentialPackage#b/1@da3503ru.
+[2022-03-17 00:08:05] (0s) Inferred that Module::moduleNameFromFile#ff#shared/2@ccd03afa is empty, due to Module::isPotentialSourcePackage#b/1@050bc8qf.
+[2022-03-17 00:08:05] (0s) Inferred that Module::moduleNameFromFile#ff#shared#1/3@7959f6mc is empty, due to Module::moduleNameFromFile#ff#shared/2@ccd03afa.
+[2022-03-17 00:08:05] (0s) Inferred that Module::moduleNameFromFile#ff#antijoin_rhs/2@2d4f0cha is empty, due to Module::moduleNameFromFile#ff#shared#1/3@7959f6mc.
+[2022-03-17 00:08:05] (0s) Inferred that Module::moduleNameFromFile#ff#antijoin_rhs#1/2@ff9d640r is empty, due to Module::moduleNameFromFile#ff#shared#1/3@7959f6mc.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Module::isPotentialSourcePackage#b/1@050bc8qf with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Module::moduleNameFromFile#ff#shared/2@ccd03afa with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Module::moduleNameFromFile#ff#shared#1/3@7959f6mc with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Module::moduleNameFromFile#ff#antijoin_rhs/2@2d4f0cha with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Module::moduleNameFromFile#ff#antijoin_rhs#1/2@ff9d640r with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Module::moduleNameFromBase#ff/2@bcdb4bt8
+[2022-03-17 00:08:05] (0s)  >>> Created relation Module::moduleNameFromBase#ff/2@bcdb4bt8 with 1 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Module::moduleNameFromFile#ff#join_rhs/3@a10dafh4
+[2022-03-17 00:08:05] (0s)  >>> Created relation Module::moduleNameFromFile#ff#join_rhs/3@a10dafh4 with 1 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstGenerated::ImportStar_::getModule_dispred#ff/2@990d3bd8
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstGenerated::ImportStar_::getModule_dispred#ff/2@990d3bd8 with 0 rows.
+[2022-03-17 00:08:05] (0s) Inferred that Import::ImportStar::getModuleExpr_dispred#ff/2@ba823bhl is empty, due to AstGenerated::ImportStar_::getModule_dispred#ff/2@990d3bd8.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Import::ImportStar::getModuleExpr_dispred#ff/2@ba823bhl with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation xmlEncoding/2@a126dfgj with 0 rows.
+[2022-03-17 00:08:05] (0s) Inferred that XML::XMLParent#b/1@5e3e7ehs is empty, due to xmlEncoding/2@a126dfgj.
+[2022-03-17 00:08:05] (0s) Inferred that XML::XMLFile#class#f/1@a13467dj is empty, due to XML::XMLParent#b/1@5e3e7ehs.
+[2022-03-17 00:08:05] (0s)  >>> Created relation XML::XMLParent#b/1@5e3e7ehs with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation XML::XMLFile#class#f/1@a13467dj with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Files::Container::getName_dispred#ff/2@6102fe3p
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::Container::getName_dispred#ff/2@6102fe3p with 10 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Files::import_path_element#ff#shared/4@f89c1fq2
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::import_path_element#ff#shared/4@f89c1fq2 with 1 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Files::import_path_element#ff#count_range/2@ae3d57p1
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::import_path_element#ff#count_range/2@ae3d57p1 with 1 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Files::import_path_element#ff#join_rhs/2@c84ae9r6
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::import_path_element#ff#join_rhs/2@c84ae9r6 with 1 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Files::import_path_element#ff#antijoin_rhs/2@eea83cfa
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::import_path_element#ff#antijoin_rhs/2@eea83cfa with 1 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Files::import_path_element#ff/2@25c260s4
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::import_path_element#ff/2@25c260s4 with 4 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Files::import_path_element#ff_10#join_rhs/2@7b51264u
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::import_path_element#ff_10#join_rhs/2@7b51264u with 4 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Files::Container::isImportRoot_dispred#ff/2@3d02feib
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::Container::isImportRoot_dispred#ff/2@3d02feib with 0 rows.
+[2022-03-17 00:08:05] (0s) Inferred that Files::Container::getImportRoot_dispred#2#bff/3@686e4wla is empty, due to Files::Container::isImportRoot_dispred#ff/2@3d02feib.
+[2022-03-17 00:08:05] (0s) Inferred that project#Files::Container::isImportRoot_dispred#ff/1@22524fp4 is empty, due to Files::Container::isImportRoot_dispred#ff/2@3d02feib.
+[2022-03-17 00:08:05] (0s) Inferred that Files::Container::getImportRoot_dispred#2#bff_021#join_rhs/3@cbb835vi is empty, due to Files::Container::getImportRoot_dispred#2#bff/3@686e4wla.
+[2022-03-17 00:08:05] (0s) Inferred that Module::isStubRoot#f#antijoin_rhs/2@e1efff10 is empty, due to project#Files::Container::isImportRoot_dispred#ff/1@22524fp4.
+[2022-03-17 00:08:05] (0s) Inferred that Files::Container::getImportRoot_dispred#bb#shared/3@3f5bc6su is empty, due to Files::Container::getImportRoot_dispred#2#bff_021#join_rhs/3@cbb835vi.
+[2022-03-17 00:08:05] (0s) Inferred that Files::Container::getImportRoot_dispred#bb#antijoin_rhs/3@18f557n0 is empty, due to Files::Container::getImportRoot_dispred#bb#shared/3@3f5bc6su.
+[2022-03-17 00:08:05] (0s) Inferred that Files::Container::getImportRoot_dispred#bb/2@380d1620 is empty, due to Files::Container::getImportRoot_dispred#bb#shared/3@3f5bc6su.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::Container::getImportRoot_dispred#bb#antijoin_rhs/3@18f557n0 with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Module::isStubRoot#f#antijoin_rhs/2@e1efff10 with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::Container::getImportRoot_dispred#bb#shared/3@3f5bc6su with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::Container::getImportRoot_dispred#2#bff/3@686e4wla with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::Container::getImportRoot_dispred#2#bff_021#join_rhs/3@cbb835vi with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Files::Container::getImportRoot_dispred#bb/2@380d1620 with 0 rows.
+[2022-03-17 00:08:05] (0s)  >>> Created relation project#Files::Container::isImportRoot_dispred#ff/1@22524fp4 with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Module::isStubRoot#f/1@2fa314jd
+[2022-03-17 00:08:05] (0s)  >>> Created relation Module::isStubRoot#f/1@2fa314jd with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Module::moduleNameFromFile#ff/2@i1#c63b8wil (iteration 1)
+[2022-03-17 00:08:05] (0s) Empty delta for Module::moduleNameFromFile#ff_delta (order for disjuncts: delta=<standard>).
+[2022-03-17 00:08:05] (0s) Accumulating deltas
+[2022-03-17 00:08:05] (0s)  >>> Created relation Module::moduleNameFromFile#ff/2@c63b8wil with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Module::Module::getName_dispred#ff/2@2afda94k
+[2022-03-17 00:08:05] (0s)  >>> Created relation Module::Module::getName_dispred#ff/2@2afda94k with 0 rows.
+[2022-03-17 00:08:05] (0s) Inferred that project#Module::Module::getName_dispred#ff/1@2d0b437r is empty, due to Module::Module::getName_dispred#ff/2@2afda94k.
+[2022-03-17 00:08:05] (0s)  >>> Created relation project#Module::Module::getName_dispred#ff/1@2d0b437r with 0 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Module::Module::toString_dispred#ff/2@39ba35mf
+[2022-03-17 00:08:05] (0s)  >>> Created relation Module::Module::toString_dispred#ff/2@39ba35mf with 1 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate AstGenerated::Scope_::toString_dispred#ff/2@620b9a3f
+[2022-03-17 00:08:05] (0s)  >>> Created relation AstGenerated::Scope_::toString_dispred#ff/2@620b9a3f with 4 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Function::FunctionExpr::getADecoratorCall#ff#join_rhs/1@e92b8972
+[2022-03-17 00:08:05] (0s)  >>> Created relation Function::FunctionExpr::getADecoratorCall#ff#join_rhs/1@e92b8972 with 3 rows.
+[2022-03-17 00:08:05] (0s) Starting to evaluate predicate Class::ClassExpr::getADecoratorCall#ff#join_rhs/1@910a45d2
+[2022-03-17 00:08:05] (0s)  >>> Created relation Class::ClassExpr::getADecoratorCall#ff#join_rhs/1@910a45d2 with 0 rows.
+[2022-03-17 00:08:05] (0s) Inferred that Class::ClassDef#class#f/1@6968e9t0 is empty, due to Class::ClassExpr::getADecoratorCall#ff#join_rhs/1@910a45d2.
+[2022-03-17 00:08:05] (0s)  >>> Created relation Class::ClassDef#class#f/1@6968e9t0 with 0 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate py_exprs_203#join_rhs/3@f2934ar9
+[2022-03-17 00:08:06] (0s)  >>> Created relation py_exprs_203#join_rhs/3@f2934ar9 with 41 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate AstGenerated::ExprList_::getItem_dispred#ffb/3@43ed022b
+[2022-03-17 00:08:06] (0s)  >>> Created relation AstGenerated::ExprList_::getItem_dispred#ffb/3@43ed022b with 12 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate AstGenerated::Call_::getPositionalArg_dispred#ffb/3@84d5464n
+[2022-03-17 00:08:06] (0s)  >>> Created relation AstGenerated::Call_::getPositionalArg_dispred#ffb/3@84d5464n with 3 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate Exprs::Call::getArg_dispred#ffb#antijoin_rhs/3@bd79a0pi
+[2022-03-17 00:08:06] (0s)  >>> Created relation Exprs::Call::getArg_dispred#ffb#antijoin_rhs/3@bd79a0pi with 0 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate Exprs::Call::getArg_dispred#ffb#antijoin_rhs#1/1@ee7cd9ns
+[2022-03-17 00:08:06] (0s)  >>> Created relation Exprs::Call::getArg_dispred#ffb#antijoin_rhs#1/1@ee7cd9ns with 0 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate Exprs::Call::getArg_dispred#ffb/3@c5676ccd
+[2022-03-17 00:08:06] (0s)  >>> Created relation Exprs::Call::getArg_dispred#ffb/3@c5676ccd with 3 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate Exprs::Call::getArg_dispred#ffb_120#join_rhs/3@87746d06
+[2022-03-17 00:08:06] (0s)  >>> Created relation Exprs::Call::getArg_dispred#ffb_120#join_rhs/3@87746d06 with 3 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate Class::ClassExpr::getADecoratorCall#ff/2@i1#10f54w9c (iteration 1)
+[2022-03-17 00:08:06] (0s) Empty delta for Class::ClassExpr::getADecoratorCall#ff_delta (order for disjuncts: delta=<standard>).
+[2022-03-17 00:08:06] (0s) Accumulating deltas
+[2022-03-17 00:08:06] (0s)  >>> Created relation Class::ClassExpr::getADecoratorCall#ff/2@10f54w9c with 0 rows.
+[2022-03-17 00:08:06] (0s) Inferred that project#Class::ClassExpr::getADecoratorCall#ff/1@468f908o is empty, due to Class::ClassExpr::getADecoratorCall#ff/2@10f54w9c.
+[2022-03-17 00:08:06] (0s)  >>> Created relation project#Class::ClassExpr::getADecoratorCall#ff/1@468f908o with 0 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate Function::FunctionExpr::getADecoratorCall#ff/2@i1#f5ca7w5l (iteration 1)
+[2022-03-17 00:08:06] (0s) Empty delta for Function::FunctionExpr::getADecoratorCall#ff_delta (order for disjuncts: delta=<standard>).
+[2022-03-17 00:08:06] (0s) Accumulating deltas
+[2022-03-17 00:08:06] (0s)  >>> Created relation Function::FunctionExpr::getADecoratorCall#ff/2@f5ca7w5l with 0 rows.
+[2022-03-17 00:08:06] (0s) Inferred that project#Function::FunctionExpr::getADecoratorCall#ff/1@ec921d8h is empty, due to Function::FunctionExpr::getADecoratorCall#ff/2@f5ca7w5l.
+[2022-03-17 00:08:06] (0s)  >>> Created relation project#Function::FunctionExpr::getADecoratorCall#ff/1@ec921d8h with 0 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate m#AstGenerated::Assign_::getValue_dispred#fb/1@56f1b4gi
+[2022-03-17 00:08:06] (0s)  >>> Created relation m#AstGenerated::Assign_::getValue_dispred#fb/1@56f1b4gi with 3 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate AstGenerated::Assign_::getValue_dispred#fb/2@cfaae8ha
+[2022-03-17 00:08:06] (0s)  >>> Created relation AstGenerated::Assign_::getValue_dispred#fb/2@cfaae8ha with 3 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate AstGenerated::Assign_::getValue_dispred#fb_10#join_rhs/2@091f04aj
+[2022-03-17 00:08:06] (0s)  >>> Created relation AstGenerated::Assign_::getValue_dispred#fb_10#join_rhs/2@091f04aj with 3 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate Function::FunctionDef#class#f/1@487ab6d2
+[2022-03-17 00:08:06] (0s)  >>> Created relation Function::FunctionDef#class#f/1@487ab6d2 with 3 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate Stmts::AssignStmt#class#f/1@7f6cdf3f
+[2022-03-17 00:08:06] (0s)  >>> Created relation Stmts::AssignStmt#class#f/1@7f6cdf3f with 5 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate AstGenerated::Assign__not_AssignStmt_ClassDef_FunctionDef#f/1@ac99a00p
+[2022-03-17 00:08:06] (0s)  >>> Created relation AstGenerated::Assign__not_AssignStmt_ClassDef_FunctionDef#f/1@ac99a00p with 0 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate AstGenerated::AstNode_::toString_dispred#bf/2@2d6f71di
+[2022-03-17 00:08:06] (0s)  >>> Created relation AstGenerated::AstNode_::toString_dispred#bf/2@2d6f71di with 10 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate Flow::ControlFlowNode::toString_dispred#bf/2@343a6793
+[2022-03-17 00:08:06] (0s)  >>> Created relation Flow::ControlFlowNode::toString_dispred#bf/2@343a6793 with 10 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate Exprs::Name::defines_dispred#ff_10#join_rhs/2@03161dkj
+[2022-03-17 00:08:06] (0s)  >>> Created relation Exprs::Name::defines_dispred#ff_10#join_rhs/2@03161dkj with 10 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate #select#ff/2@eec70bkj
+[2022-03-17 00:08:06] (0s)  >>> Created relation #select#ff/2@eec70bkj with 6 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate Exprs::Name::toString_dispred#ff_0#antijoin_rhs/1@e710457l
+[2022-03-17 00:08:06] (0s)  >>> Created relation Exprs::Name::toString_dispred#ff_0#antijoin_rhs/1@e710457l with 21 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate #select#query#ffffffff#shared/3@df8cdeda
+[2022-03-17 00:08:06] (0s)  >>> Created relation #select#query#ffffffff#shared/3@df8cdeda with 6 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate #select#query#ffffffff#shared#1/4@485e74do
+[2022-03-17 00:08:06] (0s)  >>> Created relation #select#query#ffffffff#shared#1/4@485e74do with 6 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate locations_ast_102345#join_rhs/6@9419b7sb
+[2022-03-17 00:08:06] (0s)  >>> Created relation locations_ast_102345#join_rhs/6@9419b7sb with 72 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate Module::Module::getFile_dispred#ff_0#antijoin_rhs/1@ae3830t9
+[2022-03-17 00:08:06] (0s)  >>> Created relation Module::Module::getFile_dispred#ff_0#antijoin_rhs/1@ae3830t9 with 1 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate Files::Location::hasLocationInfo_dispred#ffffff/6@c6a2c4oi
+[2022-03-17 00:08:06] (0s)  >>> Created relation Files::Location::hasLocationInfo_dispred#ffffff/6@c6a2c4oi with 72 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate project#Files::Location::hasLocationInfo_dispred#ffffff/1@3c9b72du
+[2022-03-17 00:08:06] (0s)  >>> Created relation project#Files::Location::hasLocationInfo_dispred#ffffff/1@3c9b72du with 72 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate #select#query#ffffffff#antijoin_rhs/3@4d0101a4
+[2022-03-17 00:08:06] (0s)  >>> Created relation #select#query#ffffffff#antijoin_rhs/3@4d0101a4 with 6 rows.
+[2022-03-17 00:08:06] (0s) Starting to evaluate predicate #select#query#ffffffff/8@d035a669
+[2022-03-17 00:08:06] (0s)  >>> Created relation #select#query#ffffffff/8@d035a669 with 6 rows.
+[2022-03-17 00:08:06] (0s) Query done
+[2022-03-17 00:08:06] (0s) Sequence stamp origin is -6477969978770347315
+[2022-03-17 00:08:06] (0s) Pausing evaluation to sync to disk at sequence stamp o+0
+[2022-03-17 00:08:06] (0s) Unpausing evaluation
+[2022-03-17 00:08:06] Evaluation of /home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql produced BQRS results.
+[2022-03-17 00:08:06] [PROGRESS] execute queries> [1/1 eval 880ms] Evaluation done; writing results to codeql/python-queries/Variables/VariableUses.bqrs.
+[2022-03-17 00:08:06] [PROGRESS] execute queries> Shutting down query evaluator.
+[2022-03-17 00:08:06] Pausing evaluation to close the cache at sequence stamp o+1
+[2022-03-17 00:08:06] Doing closing disk-cache trim now.
+[2022-03-17 00:08:06] After trimming, disk cache uses 545.00B.
+[2022-03-17 00:08:06] Unpausing evaluation
+[2022-03-17 00:08:06] Terminating normally.

@@ -1,0 +1,9 @@
+---
+sourceLocationPrefix: "/mnt/d/Documents/CMU S22/07400/official-project/07400/codeql"
+baselineLinesOfCode: 16
+unicodeNewlines: false
+columnKind: "utf32"
+primaryLanguage: "python"
+creationMetadata:
+  cliVersion: "2.8.2"
+  creationTime: "2022-03-17T04:07:15.331846Z"

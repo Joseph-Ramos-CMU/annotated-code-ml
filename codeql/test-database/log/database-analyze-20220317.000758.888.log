@@ -1,0 +1,46 @@
+[2022-03-17 00:07:58] This is codeql database analyze test-database --format=CSV --output=variable-uses-output.txt /home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql
+[2022-03-17 00:07:58] Log file was started late.
+[2022-03-17 00:07:58] [PROGRESS] database analyze> Running queries.
+[2022-03-17 00:07:58] Running plumbing command: codeql database run-queries --evaluator-log-level=1 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/qlconfig.yml --no-rerun -- /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database /home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql
+[2022-03-17 00:07:58] Calling plumbing command: codeql resolve ram --format=json
+[2022-03-17 00:07:58] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx983M",
+                        "--off-heap-ram=983"
+                      ]
+[2022-03-17 00:07:58] Spawning plumbing command: execute queries -J-Xmx983M --off-heap-ram=983 --verbosity=progress --logdir=/mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database/log --evaluator-log-level=1 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/qlconfig.yml --no-rerun --output=/mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database/results -- /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database/db-python /home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql
+[2022-03-17 00:08:06] Plumbing command codeql execute queries terminated with status 0.
+[2022-03-17 00:08:06] Plumbing command codeql database run-queries completed with status 0.
+[2022-03-17 00:08:06] [PROGRESS] database analyze> Interpreting results.
+[2022-03-17 00:08:06] Running plumbing command: codeql database interpret-results --format=csv -o=/mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/variable-uses-output.txt --max-paths=4 --csv-location-format=line-column --print-diagnostics-summary --print-metrics-summary -- /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database /home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql
+[2022-03-17 00:08:06] Calling plumbing command: codeql resolve queries --qlconfig-file=/mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/qlconfig.yml --format=json -- /home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql
+[2022-03-17 00:08:06] Plumbing command codeql resolve queries completed:
+                      [
+                        "/home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql"
+                      ]
+[2022-03-17 00:08:06] [DETAILS] database interpret-results> Scanning for [codeql-pack.yml, qlpack.yml] from /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/.codeqlmanifest.json
+[2022-03-17 00:08:07] [DETAILS] database interpret-results> Scanning for [codeql-pack.yml, qlpack.yml] from /mnt/d/Documents/CMU S22/07400/codeql-linux64/
+[2022-03-17 00:08:07] [DETAILS] database interpret-results> Not scanning from /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql which is already done.
+[2022-03-17 00:08:07] [PROGRESS] database interpret-results> Interpreting /home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql...
+[2022-03-17 00:08:07] Calling plumbing command: codeql resolve library-path --query=/home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql --full-library-path=none --dbscheme=none --format=json
+[2022-03-17 00:08:07] [DETAILS] resolve library-path> Resolving query at normalized path /home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql.
+[2022-03-17 00:08:07] [DETAILS] resolve library-path> Found enclosing pack 'codeql/python-queries' at /home/user1/.codeql/packages/codeql/python-queries/0.0.10.
+[2022-03-17 00:08:07] [DETAILS] resolve library-path> Adding compilation cache at /home/user1/.codeql/packages/codeql/python-queries/0.0.10/.cache.
+[2022-03-17 00:08:07] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/none
+[2022-03-17 00:08:07] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2022-03-17 00:08:07] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/none"
+                        ],
+                        "dbscheme" : "/mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/none",
+                        "compilationCache" : [
+                          "/home/user1/.codeql/packages/codeql/python-queries/0.0.10/.cache"
+                        ],
+                        "relativeName" : "codeql/python-queries/Variables/VariableUses.ql",
+                        "qlPackName" : "codeql/python-queries"
+                      }
+[2022-03-17 00:08:07] [DETAILS] database interpret-results>  ... found results file at /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database/results/codeql/python-queries/Variables/VariableUses.bqrs.
+[2022-03-17 00:08:07] [DETAILS] database interpret-results> Intepreted problem query "Variable-Uses" (py/variable-uses) at path /home/user1/.codeql/packages/codeql/python-queries/0.0.10/Variables/VariableUses.ql.
+[2022-03-17 00:08:07] Plumbing command codeql database interpret-results completed.
+[2022-03-17 00:08:07] Terminating normally.

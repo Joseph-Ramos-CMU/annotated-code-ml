@@ -1,0 +1,206 @@
+[2022-03-17 00:07:14] This is codeql database create test-database --language=python
+[2022-03-17 00:07:14] Log file was started late.
+[2022-03-17 00:07:14] [PROGRESS] database create> Initializing database at /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database.
+[2022-03-17 00:07:14] Running plumbing command: codeql database init --language=python --source-root=/mnt/d/Documents/CMU S22/07400/official-project/07400/codeql --allow-missing-source-root=false --allow-already-existing -- /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database
+[2022-03-17 00:07:14] [PROGRESS] database init> Counting lines of code in /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql
+[2022-03-17 00:07:14] [PROGRESS] database init> Resolving extractor python.
+[2022-03-17 00:07:14] Calling plumbing command: codeql resolve languages --format=json
+[2022-03-17 00:07:15] [DETAILS] resolve languages> Scanning for [codeql-extractor.yml] from /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/.codeqlmanifest.json
+[2022-03-17 00:07:15] [DETAILS] resolve languages> Parsing /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/cpp/codeql-extractor.yml.
+[2022-03-17 00:07:15] [DETAILS] resolve languages> Parsing /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/csharp/codeql-extractor.yml.
+[2022-03-17 00:07:15] [DETAILS] resolve languages> Parsing /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/csv/codeql-extractor.yml.
+[2022-03-17 00:07:15] [DETAILS] resolve languages> Parsing /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/go/codeql-extractor.yml.
+[2022-03-17 00:07:15] [DETAILS] resolve languages> Parsing /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/html/codeql-extractor.yml.
+[2022-03-17 00:07:15] [DETAILS] resolve languages> Parsing /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/java/codeql-extractor.yml.
+[2022-03-17 00:07:15] [DETAILS] resolve languages> Parsing /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/javascript/codeql-extractor.yml.
+[2022-03-17 00:07:15] [DETAILS] resolve languages> Parsing /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/properties/codeql-extractor.yml.
+[2022-03-17 00:07:15] [DETAILS] resolve languages> Parsing /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/python/codeql-extractor.yml.
+[2022-03-17 00:07:15] [DETAILS] resolve languages> Parsing /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/ruby/codeql-extractor.yml.
+[2022-03-17 00:07:15] [DETAILS] resolve languages> Parsing /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/xml/codeql-extractor.yml.
+[2022-03-17 00:07:15] Plumbing command codeql resolve languages completed:
+                      {
+                        "extractors" : {
+                          "cpp" : [
+                            {
+                              "extractor_root" : "/mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/cpp"
+                            }
+                          ],
+                          "csharp" : [
+                            {
+                              "extractor_root" : "/mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/csharp"
+                            }
+                          ],
+                          "csv" : [
+                            {
+                              "extractor_root" : "/mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/csv"
+                            }
+                          ],
+                          "go" : [
+                            {
+                              "extractor_root" : "/mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/go"
+                            }
+                          ],
+                          "html" : [
+                            {
+                              "extractor_root" : "/mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/html"
+                            }
+                          ],
+                          "java" : [
+                            {
+                              "extractor_root" : "/mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/java",
+                              "extractor_options" : {
+                                "exclude" : {
+                                  "title" : "A glob excluding files from analysis.",
+                                  "description" : "A glob indicating what files to exclude from the analysis.\n",
+                                  "type" : "string"
+                                }
+                              }
+                            }
+                          ],
+                          "javascript" : [
+                            {
+                              "extractor_root" : "/mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/javascript"
+                            }
+                          ],
+                          "properties" : [
+                            {
+                              "extractor_root" : "/mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/properties"
+                            }
+                          ],
+                          "python" : [
+                            {
+                              "extractor_root" : "/mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/python"
+                            }
+                          ],
+                          "ruby" : [
+                            {
+                              "extractor_root" : "/mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/ruby"
+                            }
+                          ],
+                          "xml" : [
+                            {
+                              "extractor_root" : "/mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/xml"
+                            }
+                          ]
+                        }
+                      }
+[2022-03-17 00:07:15] [DETAILS] database init> Found candidate extractor root for python: /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/python.
+[2022-03-17 00:07:15] [PROGRESS] database init> Successfully loaded extractor Python (python) from /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/python.
+[2022-03-17 00:07:15] [PROGRESS] database init> Created skeleton CodeQL database at /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database. This in-progress database is ready to be populated by an extractor.
+[2022-03-17 00:07:15] Plumbing command codeql database init completed.
+[2022-03-17 00:07:15] [PROGRESS] database create> Running build command: []
+[2022-03-17 00:07:15] Running plumbing command: codeql database trace-command --working-dir=/mnt/d/Documents/CMU S22/07400/official-project/07400/codeql --index-traceless-dbs --no-db-cluster -- /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database
+[2022-03-17 00:07:15] Using autobuild script /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/python/tools/autobuild.sh.
+[2022-03-17 00:07:15] [PROGRESS] database trace-command> Running command in /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql: [/mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/python/tools/autobuild.sh]
+[2022-03-17 00:07:15] [build-stdout] Calling python3 /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/python/tools/get_venv_lib.py
+[2022-03-17 00:07:15] [build-stdout] Calling python3 -S /mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/python/tools/python_tracer.py -v -z all -c /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database/working/trap_cache -p /home/user1/miniconda3/envs/07400-test/lib/python3.8/site-packages -R /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql
+[2022-03-17 00:07:16] [build-stdout] [INFO] Python version 3.8.12
+[2022-03-17 00:07:16] [build-stdout] [INFO] Python extractor version 5.22
+[2022-03-17 00:07:16] [build-stdout] [INFO] [2] Extracted file /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test1.py in 85ms
+[2022-03-17 00:07:16] [build-stdout] [INFO] Processed 1 modules in 0.26s
+[2022-03-17 00:07:16] Plumbing command codeql database trace-command completed.
+[2022-03-17 00:07:16] [PROGRESS] database create> Finalizing database at /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database.
+[2022-03-17 00:07:16] Running plumbing command: codeql database finalize --mode=normal --no-db-cluster -- /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database
+[2022-03-17 00:07:16] [PROGRESS] database finalize> Running TRAP import for CodeQL database at /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database...
+[2022-03-17 00:07:16] Running plumbing command: codeql dataset import --dbscheme=/mnt/d/Documents/CMU S22/07400/codeql-linux64/codeql/python/semmlecode.python.dbscheme -- /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database/db-python /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database/trap/python
+[2022-03-17 00:07:17] Clearing disk cache since the version file /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database/db-python/default/cache/version does not exist
+[2022-03-17 00:07:17] Tuple pool not found. Clearing relations with cached strings
+[2022-03-17 00:07:17] Trimming disk cache at /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database/db-python/default/cache in mode brutal.
+[2022-03-17 00:07:17] Sequence stamp origin is -6477970163933117913
+[2022-03-17 00:07:17] Pausing evaluation to hard-clear memory at sequence stamp o+0
+[2022-03-17 00:07:17] Unpausing evaluation
+[2022-03-17 00:07:17] Pausing evaluation to quickly trim disk at sequence stamp o+1
+[2022-03-17 00:07:17] Unpausing evaluation
+[2022-03-17 00:07:17] Pausing evaluation to zealously trim disk at sequence stamp o+2
+[2022-03-17 00:07:17] Unpausing evaluation
+[2022-03-17 00:07:17] Trimming completed (23ms): Purged everything.
+[2022-03-17 00:07:17] Scanning for files in /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database/trap/python
+[2022-03-17 00:07:17] Importing $files.bwYwlLNk_5um6Gj31bJmSu2z2Dk=.trap.gz (1 of 5)
+[2022-03-17 00:07:17] Importing $interpreter3.kYieX3aB8WH5SUD_8WtuKJjxsOQ=.trap.gz (2 of 5)
+[2022-03-17 00:07:18] Importing $stdlib_33.TnKsDH1peuDAUmN3hkdfsRRXPNA=.trap (3 of 5)
+[2022-03-17 00:07:18] Importing sourceLocationPrefix.trap.gz (4 of 5)
+[2022-03-17 00:07:18] Importing test1.py.yMZa7qF3sEnnpwngC_B5Xlt25Pc=.trap.gz (5 of 5)
+[2022-03-17 00:07:19] Merging 1 fragment for files.
+[2022-03-17 00:07:19] Merging 1 fragment for folders.
+[2022-03-17 00:07:19] Merging 1 fragment for containerparent.
+[2022-03-17 00:07:19] Merging 1 fragment for py_flags_versioned.
+[2022-03-17 00:07:19] Merging 1 fragment for py_cobjects.
+[2022-03-17 00:07:19] Merging 1 fragment for py_cobjecttypes.
+[2022-03-17 00:07:19] Merging 1 fragment for py_cobject_sources.
+[2022-03-17 00:07:19] Merging 1 fragment for py_cobjectnames.
+[2022-03-17 00:07:19] Merging 1 fragment for py_cmembers_versioned.
+[2022-03-17 00:07:19] Merging 1 fragment for py_special_objects.
+[2022-03-17 00:07:19] Merging 1 fragment for py_citems.
+[2022-03-17 00:07:19] Merging 1 fragment for ext_rettype.
+[2022-03-17 00:07:19] Merging 1 fragment for ext_argtype.
+[2022-03-17 00:07:19] Merging 1 fragment for ext_argreturn.
+[2022-03-17 00:07:19] Merging 1 fragment for ext_proptype.
+[2022-03-17 00:07:19] Merging 1 fragment for sourceLocationPrefix.
+[2022-03-17 00:07:19] Merging 1 fragment for py_Modules.
+[2022-03-17 00:07:19] Merging 1 fragment for py_module_path.
+[2022-03-17 00:07:19] Merging 1 fragment for variable.
+[2022-03-17 00:07:19] Merging 1 fragment for py_extracted_version.
+[2022-03-17 00:07:19] Merging 1 fragment for py_stmt_lists.
+[2022-03-17 00:07:19] Merging 1 fragment for py_stmts.
+[2022-03-17 00:07:19] Merging 1 fragment for py_scopes.
+[2022-03-17 00:07:19] Merging 1 fragment for py_exprs.
+[2022-03-17 00:07:19] Merging 1 fragment for py_strs.
+[2022-03-17 00:07:19] Merging 1 fragment for py_arguments.
+[2022-03-17 00:07:19] Merging 1 fragment for py_expr_lists.
+[2022-03-17 00:07:19] Merging 1 fragment for py_Functions.
+[2022-03-17 00:07:19] Merging 1 fragment for py_parameter_lists.
+[2022-03-17 00:07:19] Merging 1 fragment for py_variables.
+[2022-03-17 00:07:19] Merging 1 fragment for py_expr_contexts.
+[2022-03-17 00:07:19] Merging 1 fragment for py_numbers.
+[2022-03-17 00:07:19] Merging 1 fragment for py_operators.
+[2022-03-17 00:07:19] Merging 1 fragment for py_cmpop_lists.
+[2022-03-17 00:07:19] Merging 1 fragment for py_cmpops.
+[2022-03-17 00:07:19] Merging 1 fragment for py_exports.
+[2022-03-17 00:07:19] Merging 1 fragment for py_flow_bb_node.
+[2022-03-17 00:07:19] Merging 1 fragment for py_scope_flow.
+[2022-03-17 00:07:19] Merging 1 fragment for py_successors.
+[2022-03-17 00:07:19] Merging 1 fragment for py_idoms.
+[2022-03-17 00:07:19] Merging 1 fragment for py_ssa_var.
+[2022-03-17 00:07:19] Merging 1 fragment for py_ssa_defn.
+[2022-03-17 00:07:19] Merging 1 fragment for py_ssa_use.
+[2022-03-17 00:07:19] Merging 1 fragment for py_false_successors.
+[2022-03-17 00:07:19] Merging 1 fragment for py_true_successors.
+[2022-03-17 00:07:19] Merging 1 fragment for locations_ast.
+[2022-03-17 00:07:19] Merging 1 fragment for py_scope_location.
+[2022-03-17 00:07:19] Merging 1 fragment for py_comments.
+[2022-03-17 00:07:19] Merging 1 fragment for py_codelines.
+[2022-03-17 00:07:19] Merging 1 fragment for py_commentlines.
+[2022-03-17 00:07:19] Merging 1 fragment for py_docstringlines.
+[2022-03-17 00:07:19] Merging 1 fragment for py_alllines.
+[2022-03-17 00:07:19] Merging 1 fragment for numlines.
+[2022-03-17 00:07:19] Merging 1 fragment for py_locations.
+[2022-03-17 00:07:19] Saving string and id pools to disk.
+[2022-03-17 00:07:21] Finished importing trap files.
+[2022-03-17 00:07:21] Pausing evaluation to close the cache at sequence stamp o+3
+[2022-03-17 00:07:21] The disk cache is freshly trimmed; leave it be.
+[2022-03-17 00:07:21] Unpausing evaluation
+[2022-03-17 00:07:22] Plumbing command codeql dataset import completed.
+[2022-03-17 00:07:22] [PROGRESS] database finalize> TRAP import complete (5.1s).
+[2022-03-17 00:07:22] Running plumbing command: codeql database cleanup --mode=normal -- /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database
+[2022-03-17 00:07:22] [PROGRESS] database cleanup> Cleaning up existing TRAP files after import...
+[2022-03-17 00:07:22] [PROGRESS] database cleanup> TRAP files cleaned up (15ms).
+[2022-03-17 00:07:22] [PROGRESS] database cleanup> Cleaning up scratch directory...
+[2022-03-17 00:07:22] [PROGRESS] database cleanup> Scratch directory cleaned up (15ms).
+[2022-03-17 00:07:22] Running plumbing command: codeql dataset cleanup --mode=normal -- /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database/db-python
+[2022-03-17 00:07:22] [PROGRESS] dataset cleanup> Cleaning up dataset in /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database/db-python.
+[2022-03-17 00:07:22] Trimming disk cache at /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database/db-python/default/cache in mode normal.
+[2022-03-17 00:07:22] Sequence stamp origin is -6477970141912690879
+[2022-03-17 00:07:22] Pausing evaluation to zealously trim disk at sequence stamp o+0
+[2022-03-17 00:07:22] Unpausing evaluation
+[2022-03-17 00:07:22] Trimming completed (12ms): Trimmed disposable data from cache.
+[2022-03-17 00:07:22] Pausing evaluation to close the cache at sequence stamp o+1
+[2022-03-17 00:07:22] The disk cache is freshly trimmed; leave it be.
+[2022-03-17 00:07:22] Unpausing evaluation
+[2022-03-17 00:07:22] [PROGRESS] dataset cleanup> Trimmed disposable data from cache.
+[2022-03-17 00:07:22] [PROGRESS] dataset cleanup> Finalizing dataset in /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database/db-python
+[2022-03-17 00:07:22] [DETAILS] dataset cleanup> Finished deleting ID pool from /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database/db-python (42ms).
+[2022-03-17 00:07:22] Plumbing command codeql dataset cleanup completed.
+[2022-03-17 00:07:22] Plumbing command codeql database cleanup completed with status 0.
+[2022-03-17 00:07:22] Plumbing command codeql database finalize completed.
+[2022-03-17 00:07:22] [PROGRESS] database create> Successfully created database at /mnt/d/Documents/CMU S22/07400/official-project/07400/codeql/test-database.
+[2022-03-17 00:07:22] Terminating normally.
